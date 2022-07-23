@@ -1,7 +1,6 @@
 <template>
   <div>
     <button @click="sendEmail">Email</button>
-    <button @click="createPostWGet">Create Post With Get</button>
   </div>
   <h2>{{ product.id }}</h2>
   <h2>{{ product.name }}</h2>
@@ -28,11 +27,6 @@ export default {
         orderTotal: 10,
       };
       axios.post('/api/sendmail2', formData).then((response) => {
-        console.log(response);
-      });
-    },
-    createPostWGet() {
-      axios.get('/api/mail').then((response) => {
         console.log(response);
       });
     },
